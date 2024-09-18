@@ -1,0 +1,18 @@
+{
+  "index": "Welcome to Controller!",
+  "quickstart": "Quickstart",
+  "integrations": "Integrations",
+  "contact_us": "Contact us",
+  "updates": "Live updates",
+  "about": {
+    "title": "About",
+    "type": "page",
+    "href": "/about"
+  },
+  "contact": {
+    "title": "Contact ↗",
+    "type": "page",
+    "href": "https://www.linkedin.com/in/tzb-aaron/",
+    "newWindow": true
+  }
+}

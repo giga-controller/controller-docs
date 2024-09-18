@@ -1,0 +1,29 @@
+import Link from 'next/link'
+import Image from 'next/image'
+
+# OAuth 2.0 Authentication
+How to quickly get a Linear OAuth application set up.
+
+It is recommended you create a workspace for the purpose of managing the OAuth2 Application, as each admin user will have access.
+
+## Create an OAuth2 application in Linear
+Create a new <Link href="https://linear.app/settings/api/applications/new" style={{ color: '#3b82f6', textDecoration: 'underline' }}>OAuth2 Application</Link>
+
+## Configure the redirect callback and redirect URLs
+
+1. Add any Application name, Developer name.
+
+2. Add https://controller-frontend.vercel.app/ as the Developer URL
+
+3. Add https://controller-frontend.vercel.app/api/oauth2/callback as the Callback URL
+
+4. Click the big blue Create button
+
+It should look something like this
+<Image src="/../public/linear.png" alt="Linear OAuth setup" width={800} height={400} />
+
+## Import client details 
+
+Copy the Client ID and Client Secret. Paste these into the corresponding fields in Controller.
+
+Hit Login with Linear. Done!

@@ -1,0 +1,31 @@
+import Link from 'next/link'
+import Image from 'next/image'
+
+# OAuth 2.0 Authentication
+How to quickly get a Slack OAuth application set up.
+
+## Create an OAuth2 application in Slack
+Create a new <Link href="https://api.slack.com/apps" style={{ color: '#3b82f6', textDecoration: 'underline' }}>OAuth2 Application</Link>
+
+## Configure the redirect callback and redirect URLs
+
+1. Select Create New App > From scratch.
+
+2. Enter an App Name and select your Workspace. Click on Create App.
+
+3. In Basic Information, open the App Credentials section.
+
+4. Copy the Client ID and Client Secret. Paste these into the corresponding fields in Controller.
+
+5. Select OAuth & Permissions in Slack's sidebar tab.  
+
+6. Add a new Redirect URL https://controller-frontend.vercel.app/api/oauth2/callback. Don't forget to click Save URLs.
+
+7. In the Scopes section, select appropriate scopes for your app. Refer to image below!
+
+<Image src="/../public/slack.png" alt="Slack OAuth setup" width={800} height={400} />
+
+8. After you've added scopes, go up to the OAuth Tokens for Your Workspace section and select Install to Workspace. You must be a Slack workspace admin to complete this action.
+Select Allow. 
+
+9. Go back to Controller and click login with Slack. Done!

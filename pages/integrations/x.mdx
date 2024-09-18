@@ -1,0 +1,35 @@
+import Link from 'next/link'
+import Image from 'next/image'
+
+# OAuth 2.0 Authentication
+How to quickly get a X OAuth application set up.
+
+## Create an OAuth2 application in X
+
+1. In the <Link href="https://developer.x.com/en/portal/dashboard" style={{ color: '#3b82f6', textDecoration: 'underline' }}>X Developer Portal</Link> 
+, sign up for an account if you don't already have one. Open your project. 
+
+2. On the Project's and Apps tab, click on Overview. 
+
+3. Click on the App settings logo beside your pre-created app. 
+
+4. In the User authentication settings, select Set Up. 
+
+5. Set the App permissions. Choose Read and write and Direct message if you want to use all of the functions. 
+
+6. In the Type of app section, select Web App, Automated App or Bot. 
+
+7. Add https://controller-frontend.vercel.app/api/oauth2/callback as the Callback URL.
+
+8. Add https://controller-frontend.vercel.app/ as the Developer URL.
+It should look something like this
+
+<Image src="/../public/x.png" alt="Linear OAuth setup" width={500} height={200} />
+
+9. Save your changes. 
+
+## Import client details 
+
+Copy both your Client ID and Client Secret from X, then paste it in Controller.
+
+Hit Login with X. Done!
