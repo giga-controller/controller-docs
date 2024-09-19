@@ -1,0 +1,67 @@
+import Link from 'next/link'
+import Image from 'next/image'
+
+# OAuth 2.0 Authentication
+How to quickly get a Gmail OAuth application set up.
+
+## Create an OAuth2 application in Google Cloud
+1. Create a new <Link href="https://console.cloud.google.com/" style={{ color: '#3b82f6', textDecoration: 'underline' }}>Google Cloud Console project</Link>
+
+2. Log in to your Google Cloud Console using your Google credentials.
+
+3. In the top menu, select the project dropdown in the top navigation and select New project or go directly to the New Project page.
+
+4. Enter a Project name and select the Location for your project.
+
+5. Select Create.
+
+6. Check the top navigation and make sure the project dropdown has your project selected. If not, select the project you just created. 
+
+
+<Image src="/../public/gcp.png" alt="GCP setup" width={800} height={400} />
+
+## Enable APIs
+With your project created, enable the APIs you'll need access to:
+
+4. Go to APIs & Services > Library.
+5. Search for and select the API(s) you want to enable. For example, for Gmail, search for and enable the Gmail API. Search and enable all
+the applcations that you want to use.
+
+<Image src="/../public/search.png" alt="GCP search" width={800} height={400} />
+
+## Configure your OAuth consent screen
+
+1. Open the left navigation menu and go to APIs & Services > OAuth consent screen.
+2. For User Type, select Internal for user access within your organization's Google workspace or External for any user with a Google account. Refer to Google's User type documentation for more information on user types.
+3. Select Create.
+4. Enter the essential information:
+   - App name
+   - User support email
+   - Email addresses field in Developer contact information
+5. In the Authorized domains section, add controller-frontend.vercel.app.
+6. Select SAVE AND CONTINUE to go to the Scopes page.
+7. You don't need to set any scopes. Select SAVE AND CONTINUE again to go to the Summary page.
+8. On the Summary page, review the information for accuracy.
+
+## Allow your Google OAuth consent
+
+1. In the APIs & Services section, select OAuth consent screen.
+2. Under Test users, select +Add Users
+3. Add your Google email address to your account and hit Save. 
+
+## Create your Google OAuth client credentials
+
+Next, create the OAuth client credentials in Google:
+
+1. In the APIs & Services section, select Credentials.
+2. Select + CREATE CREDENTIALS > OAuth client ID.
+<Image src="/../public/credentials.png" alt="GCP credentials" width={800} height={400} />
+3. In the Application type dropdown, select Web application.
+4. Add ```https://controller-frontend.vercel.app/api/oauth2/callback``` as the Authorized redirect URIs in Google Console.
+5. Select CREATE.
+
+## Import client details 
+
+Copy the Client ID and Client Secret. Paste these into the corresponding fields in Controller for each Google App that you enabled under Enable APIs.
+
+Hit Login with Google. Done!
