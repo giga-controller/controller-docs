@@ -18,7 +18,7 @@ How to quickly get a Gmail OAuth application set up.
 6. Check the top navigation and make sure the project dropdown has your project selected. If not, select the project you just created. 
 
 
-<Image src="/../public/gcp.png" alt="GCP setup" width={800} height={400} />
+<Image src="/gcp.png" alt="GCP setup" width={800} height={400} />
 
 ## Enable APIs
 With your project created, enable the APIs you'll need access to:
@@ -27,7 +27,7 @@ With your project created, enable the APIs you'll need access to:
 5. Search for and select the API(s) you want to enable. For example, for Gmail, search for and enable the Gmail API. Search and enable all
 the applcations that you want to use.
 
-<Image src="/../public/search.png" alt="GCP search" width={800} height={400} />
+<Image src="/search.png" alt="GCP search" width={800} height={400} />
 
 ## Configure your OAuth consent screen
 
@@ -55,7 +55,7 @@ Next, create the OAuth client credentials in Google:
 
 1. In the APIs & Services section, select Credentials.
 2. Select + CREATE CREDENTIALS > OAuth client ID.
-<Image src="/../public/credentials.png" alt="GCP credentials" width={800} height={400} />
+<Image src="/credentials.png" alt="GCP credentials" width={800} height={400} />
 3. In the Application type dropdown, select Web application.
 4. Add ```https://controller-frontend.vercel.app/api/oauth2/callback``` as the Authorized redirect URIs in Google Console.
 5. Select CREATE.
