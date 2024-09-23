@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { Callout } from 'nextra-theme-docs'
 
 # OAuth 2.0 Authentication
 How to quickly get a Linear OAuth application set up.
@@ -20,7 +21,8 @@ Create a new <Link href="https://linear.app/settings/api/applications/new" style
 4. Click the big blue Create button
 
 It should look something like this
-<Image src="/linear.png" alt="Linear OAuth setup" width={800} height={400} />
+<br/>
+<Image src="/linear/oauth2.png" alt="Linear OAuth setup" width={800} height={400} />
 
 ## Import client details 
 
@@ -28,6 +30,49 @@ Copy the Client ID and Client Secret. Paste these into the corresponding fields 
 
 Hit Login with Linear. Done!
 
-| Supported functions |
-| :----- |
-| Create Issues <br/> Get Issues <br/> Update Issues <br/> Delete Issues <br/> |
+<br/> <br/>
+
+# Using Linear
+
+The following types of commands are supported (for now). Drop us a message if you need something else!
+
+## Create an issue
+
+You can create a Linear issue and specify the relevant fields. 
+```
+Create an issue titled Talk to Users and assign it to Aaron Tan
+```
+
+## Get issues
+
+You can retrieve Linear issues by specifying the relevant filter conditions.
+```
+Get me all issues assigned to Aaron Tan that are in progress
+```
+
+## Update an issue
+
+You can update a Linear issue by specifying the relevant filter conditions and updated values.
+```
+Assign the label "Launch" to all the issues assigned to Aaron Tan
+```
+
+## Delete an issue
+
+You can delete a Linear issue by specifying the relevant filter conditions.
+```
+Delete all issues assigned to Aaron Tan
+```
+
+<br/> <br/>
+
+# Linear Gotchas
+
+<Callout type="info" emoji="ℹ️">
+When referencing names, make sure to use the exact name as listed under the members section of your workplace settings.
+
+For the following examples, you should use "Jin Yang Chen" instead of "Jin Yang" in your instructions. 
+</Callout>
+
+<br/>
+<Image src="/linear/members.png" alt="Linear Members" width={400} height={400} />

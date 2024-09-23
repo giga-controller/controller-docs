@@ -13,6 +13,7 @@ const config: DocsThemeConfig = {
   chat: {
     link: 'https://discord.gg/apUKj5zS',
   },
+  docsRepositoryBase: 'https://github.com/giga-controller/controller-docs',
   footer: {
     text: 'Controller',
   },
