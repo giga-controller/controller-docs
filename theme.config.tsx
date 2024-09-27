@@ -1,6 +1,5 @@
 import React from 'react'
 import { DocsThemeConfig } from 'nextra-theme-docs'
-import Link from 'next/link'
 
 const config: DocsThemeConfig = {
   logo: (
