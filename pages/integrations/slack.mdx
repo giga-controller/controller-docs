@@ -1,11 +1,13 @@
-import Link from 'next/link'
-import Image from 'next/image'
-import { Callout } from 'nextra-theme-docs'
+import Link from "next/link";
+import Image from "next/image";
+import { Callout } from "nextra-theme-docs";
 
 # OAuth 2.0 Authentication
+
 How to quickly get a Slack OAuth2 application set up.
 
 ## Create an OAuth2 application in Slack
+
 Create a new <Link href="https://api.slack.com/apps" style={{ color: '#3b82f6', textDecoration: 'underline' }}>OAuth2 Application</Link>
 
 ## Configure the redirect callback and redirect URLs
@@ -18,20 +20,20 @@ Create a new <Link href="https://api.slack.com/apps" style={{ color: '#3b82f6', 
 
 4. Copy the Client ID and Client Secret. Paste these into the corresponding fields in Controller.
 
-5. Select OAuth & Permissions in Slack's sidebar tab.  
+5. Select OAuth & Permissions in Slack's sidebar tab.
 
-6. Add a new Redirect URL ```https://controller-frontend.vercel.app/api/oauth2/callback```. Don't forget to click Save URLs.
+6. Add a new Redirect URL `https://controller-frontend.vercel.app/api/oauth2/callback`. Don't forget to click Save URLs.
 
 7. In the Scopes section, select appropriate scopes for your app. Refer to image below!
 
 <Image src="/slack.png" alt="Slack OAuth setup" width={800} height={400} />
 
 8. After you've added scopes, go up to the OAuth Tokens for Your Workspace section and select Install to Workspace. You must be a Slack workspace admin to complete this action.
-Select Allow. 
+   Select Allow.
 
 9. Go back to Controller and click login with Slack. Done!
 
-<br/> <br/>
+<br /> <br />
 
 # Using Slack
 
@@ -39,7 +41,8 @@ The following types of commands are supported (for now). Drop us a message if yo
 
 ## Send a message
 
-You can send a Slack message by specifying the content and channel name 
+You can send a Slack message by specifying the content and channel name
+
 ```
 Send a message on the startup channel reminding everyone it is important to talk to users
 ```
@@ -47,5 +50,5 @@ Send a message on the startup channel reminding everyone it is important to talk
 ## Slack Gotchas
 
 <Callout type="info" emoji="ℹ️">
-It is important to specify the channel name when giving instructions.
+  It is important to specify the channel name when giving instructions.
 </Callout>

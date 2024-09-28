@@ -1,7 +1,7 @@
 {
-    "common": "Common",
-    "calendar": "Calendar",
-    "docs": "Docs",
-    "gmail": "Gmail",
-    "sheets": "Sheets"
+  "common": "Common",
+  "calendar": "Calendar",
+  "docs": "Docs",
+  "gmail": "Gmail",
+  "sheets": "Sheets"
 }
