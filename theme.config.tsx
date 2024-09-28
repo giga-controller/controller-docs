@@ -8,7 +8,7 @@ const config: DocsThemeConfig = {
     link: "https://github.com/giga-controller/controller",
   },
   chat: {
-    link: "https://discord.gg/apUKj5zS",
+    link: "https://discord.gg/tK7xu3n22e",
   },
   docsRepositoryBase: "https://github.com/giga-controller/controller-docs",
   footer: {
