@@ -4,7 +4,8 @@
   "best_practices": "Best Practices",
   "integrations": "Integrations",
   "contact_us": "Contact Us",
-  "updates": "Live Updates",
+  "updates": "Changelog",
+  "custom_backend": "Custom Backend",
   "about": {
     "title": "About",
     "type": "page",
