@@ -3,9 +3,9 @@
   "quickstart": "Quickstart",
   "best_practices": "Best Practices",
   "integrations": "Integrations",
-  "contact_us": "Contact Us",
   "updates": "Changelog",
-  "custom_backend": "Custom Backend",
+  "contact_us": "Contact Us",
+  "local_deployment": "Local Deployment",
   "about": {
     "title": "About",
     "type": "page",
