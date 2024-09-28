@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  push:
+    branches:
+      - main
+
+jobs:
+  prettier-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Run Prettier check
+        run: npx prettier --check .

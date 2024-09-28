@@ -2,9 +2,8 @@
 
 Documentation for Controller!
 
-
 ## To run
 
-```pnpm install```
+`pnpm install`
 
-```pnpm dev```
+`pnpm dev`

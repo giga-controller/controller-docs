@@ -1,0 +1,29 @@
+# Best Practices
+
+To make your experience with Controller as smooth as possible, we recommend the following tips
+
+### Use keywords to communicate your intent clearly
+
+The following keywords: `Create`, `Get`, `Update`, `Delete` signal clearly to Controller the type of action you want to perform. Prioritize these keywords over other synonyms.
+
+```
+# Optimal instruction
+Update Linear issue number 25 to be titled "Talk to Users"
+```
+
+```
+# Less optimal instruction
+Mark Linear issue number 25's title as "Talk to Users"
+```
+
+### Use the exact name of the integration in your instruction where possible
+
+```
+# Optimal instruction
+Create a 1 hour Google Calendar event titled "Talk to Users" starting from UTC 8pm on Sep 22 2024 and invite chenjinyang4192@gmail.com
+```
+
+```
+# Less optimal instruction
+Create a 1 hour event titled "Talk to Users" starting from UTC 8pm on Sep 22 2024 and invite chenjinyang4192@gmail.com
+```

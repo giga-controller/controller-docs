@@ -1,36 +1,44 @@
-import Link from 'next/link'
-import Image from 'next/image'
-import { Callout } from 'nextra-theme-docs'
+import Link from "next/link";
+import Image from "next/image";
+import { Callout } from "nextra-theme-docs";
 
 # OAuth 2.0 Authentication
+
 How to quickly get a Linear OAuth2 application set up.
 
 It is recommended you create a workspace for the purpose of managing the OAuth2 Application, as each admin user will have access.
 
 ## Create an OAuth2 application in Linear
+
 Create a new <Link href="https://linear.app/settings/api/applications/new" style={{ color: '#3b82f6', textDecoration: 'underline' }}>OAuth2 Application</Link>
 
 ## Configure the redirect callback and redirect URLs
 
 1. Add any Application name, Developer name.
 
-2. Add ```https://controller-frontend.vercel.app/``` as the Developer URL
+2. Add `https://controller-frontend.vercel.app/` as the Developer URL
 
-3. Add ```https://controller-frontend.vercel.app/api/oauth2/callback``` as the Callback URL
+3. Add `https://controller-frontend.vercel.app/api/oauth2/callback` as the Callback URL
 
 4. Click the big blue Create button
 
 It should look something like this
-<br/>
-<Image src="/linear/oauth2.png" alt="Linear OAuth setup" width={800} height={400} />
 
-## Import client details 
+<br />
+<Image
+  src="/linear/oauth2.png"
+  alt="Linear OAuth setup"
+  width={800}
+  height={400}
+/>
+
+## Import client details
 
 Copy the Client ID and Client Secret. Paste these into the corresponding fields in Controller.
 
 Hit Login with Linear. Done!
 
-<br/> <br/>
+<br /> <br />
 
 # Using Linear
 
@@ -38,7 +46,8 @@ The following types of commands are supported (for now). Drop us a message if yo
 
 ## Create an issue
 
-You can create a Linear issue and specify the relevant fields. 
+You can create a Linear issue and specify the relevant fields.
+
 ```
 Create an issue titled Talk to Users and assign it to Aaron Tan
 ```
@@ -46,6 +55,7 @@ Create an issue titled Talk to Users and assign it to Aaron Tan
 ## Get issues
 
 You can retrieve Linear issues by specifying the relevant filter conditions.
+
 ```
 Get me all issues assigned to Aaron Tan that are in progress
 ```
@@ -53,6 +63,7 @@ Get me all issues assigned to Aaron Tan that are in progress
 ## Update an issue
 
 You can update a Linear issue by specifying the relevant filter conditions and updated values.
+
 ```
 Assign the label "Launch" to all the issues assigned to Aaron Tan
 ```
@@ -60,11 +71,12 @@ Assign the label "Launch" to all the issues assigned to Aaron Tan
 ## Delete an issue
 
 You can delete a Linear issue by specifying the relevant filter conditions.
+
 ```
 Delete all issues assigned to Aaron Tan
 ```
 
-<br/> <br/>
+<br /> <br />
 
 # Linear Gotchas
 
@@ -73,8 +85,15 @@ Delete all issues assigned to Aaron Tan
 <Callout type="info" emoji="ℹ️">
 When referencing names, make sure to use the exact name as listed under the members section of your workplace settings.
 
-For the following examples, you should use "Jin Yang Chen" instead of "Jin Yang" in your instructions. 
+For the following examples, you should use "Jin Yang Chen" instead of "Jin Yang" in your instructions.
+
 </Callout>
 
-<br/>
-<Image src="/linear/members.png" alt="Linear Members" width={400} height={400} style={{ display: 'block', margin: '0 auto' }} />
+<br />
+<Image
+  src="/linear/members.png"
+  alt="Linear Members"
+  width={400}
+  height={400}
+  style={{ display: "block", margin: "0 auto" }}
+/>
