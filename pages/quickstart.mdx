@@ -3,10 +3,6 @@ import Image from "next/image";
 
 # Get started
 
-## Deploy locally
-
-1. Follow our <Link href="https://github.com/giga-controller/controller" style={{ color: '#3b82f6', textDecoration: 'underline' }}>README</Link> for detailed instructions!
-
 ## Website
 
 1. Visit <Link href="https://www.usecontroller.com" style={{ color: '#3b82f6', textDecoration: 'underline' }}>Controller</Link>
@@ -15,8 +11,65 @@ import Image from "next/image";
 
 3. Choose the applications you want to activate on the left panel
 
-<Image src="/panel.png" alt="Controller OAuth setup" width={200} height={50} />
+<Image src="/panel.png" alt="Controller OAuth setup" width={150} height={40} />
 
 4. Follow our one-time setup for your integrations
 
 5. Chat with all your integrations!
+
+## Deploy locally
+
+### Requirements
+- git
+- Docker
+- Poetry
+- Python > 3.12.1
+
+## Setup
+Clone the <Link href="https://github.com/giga-controller/controller" style={{ color: '#3b82f6', textDecoration: 'underline' }}>Controller repo</Link>:
+```js copy
+git clone https://github.com/giga-controller/controller.git
+```
+
+#### Frontend
+1. Navigate to controller/frontend
+```js copy
+cd controller/frontend
+```
+
+2. Copy the existing environment template file
+```js copy
+cp .env.example .env
+```
+
+3. Clerk setup (To bind all your integrations to a single user)
+
+    a. Navigate to Clerk and complete step 2 from their <Link href="https://clerk.com/docs/quickstarts/nextjs#set-your-environment-variables" style={{ color: '#3b82f6', textDecoration: 'underline' }}>docs</Link>. 
+    At the final step, paste the keys into the .env file instead of .env.local
+
+<Image
+  src="/clerk.png"
+  alt="Clerk keys setup"
+  width={600}
+  height={300}
+/>
+
+    b. Your .env (NOT .env.local) file should have both keys.
+
+
+#### Backend
+1. Navigate to controller/backend
+```js copy
+cd controller/backend
+```
+
+2. Poetry setup (To manage dependencies)
+
+```js copy
+brew install poetry
+```
+
+Verify poetry installation
+```js copy
+poetry --version
+```
